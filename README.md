@@ -1,5 +1,5 @@
 # Bachelor’s Thesis
-My bachelor's thesis on magnetic resonance spectroscopy with and without J-difference editing
+My bachelor's thesis on magnetic resonance spectroscopy with and without J-difference editing.\\
 This repository contains:
 
 - `final/thesis.pdf` — the final thesis document
