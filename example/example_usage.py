@@ -105,7 +105,7 @@ for rec, rec_diff in zip(records, records_gaba):
     # SNR
     snr = calculate_snr(rec["ppm"], rec["spec_cor"]-rec["baseline_2"], shift=rec["shift"])
     snr_diff = calculate_snr(rec_diff["ppm"], rec_diff["spec_cor"], shift=rec["shift"],peak_window=(2.88, 3.05),noise_window=(2.7, 2.8))
-    rows2.append({"NAA/Cr1": NAA_over_Cr1, "Ch/Cr1":  Ch_over_Cr1, "Cr2/Cr1": Cr2_over_Cr1, "SNR": snr, "GABA/Cr1": GABA_over_Cr1, "SNR_diff": SNR_diff})
+    rows2.append({"NAA/Cr1": NAA_over_Cr1, "Ch/Cr1":  Ch_over_Cr1, "Cr2/Cr1": Cr2_over_Cr1, "SNR": snr, "GABA/Cr1": GABA_over_Cr1, "SNR_diff": snr_diff})
     print(min(rec_diff["ppm"]))
 print()
 df_result = pd.DataFrame(rows)
@@ -113,3 +113,4 @@ print(df_result.to_string(index=False))
 print()
 df_ratios = pd.DataFrame(rows2)
 print(df_ratios.to_string(index=False))
+
