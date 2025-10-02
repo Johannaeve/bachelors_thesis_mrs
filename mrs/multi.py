@@ -113,7 +113,7 @@ def fit_lorentz_helper_NAA_Cr_Ch(rec, base):
     best_result = None
     lowest_residual_norm = np.inf
 
-    for delta in [-1.2,-0.9,-0.6,-0.3,-0.2,-0.1, 0.0, 0.1,0.2, 0.3,0.6,0.9,1.2]:
+    for delta in [-0.9,-0.3, 0.0, 0.3, 0.9]:
         p0_try = p0.copy()
         p0_try[12] = delta  # Lorentz: ph0 is index 12
 
@@ -189,4 +189,5 @@ def fit_voigt_helper_GABA(rec):
         "popt": popt,                   # [w0, delta, sigma, gamma, A, dA]
         "crlbs": crlbs
     }
+
 
